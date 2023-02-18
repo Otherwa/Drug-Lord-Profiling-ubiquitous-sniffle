@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "Query5",
+    "name": "stonks",
     "datasource": {
       "name": "Drugs",
       "pluginId": "mongo-plugin",
@@ -110,7 +110,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Query5",
+  "id": "Page1_stonks",
   "deleted": false,
-  "gitSyncId": "63efaa14d616db68c3d44ef4_63f092f53d63553145064da7"
+  "gitSyncId": "63efaa14d616db68c3d44ef4_63f0925cd616db68c3d45912"
 }

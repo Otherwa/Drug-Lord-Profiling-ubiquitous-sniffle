@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "Query4",
+    "name": "appointments",
     "datasource": {
       "name": "Drugs",
       "pluginId": "mongo-plugin",
@@ -29,7 +29,7 @@
           }
         },
         "collection": {
-          "data": "stonks"
+          "data": "appointments"
         },
         "command": {
           "data": "FIND"
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"stonks\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"appointments\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -110,7 +110,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Query4",
+  "id": "Page1_appointments",
   "deleted": false,
-  "gitSyncId": "63efaa14d616db68c3d44ef4_63f0925cd616db68c3d45912"
+  "gitSyncId": "63efaa14d616db68c3d44ef4_63f091c9295431490fd8c46f"
 }

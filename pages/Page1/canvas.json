@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1590,
+          "bottomRow": 1580,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -302,7 +302,7 @@
               "rightColumn": 64,
               "textSize": "0.875rem",
               "widgetId": "t2slnumxh0",
-              "tableData": "{{Query1.data}}",
+              "tableData": "{{users.data}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -713,7 +713,7 @@
               "rightColumn": 64,
               "textSize": "0.875rem",
               "widgetId": "uos8l994gg",
-              "tableData": "{{Query2.data}}",
+              "tableData": "{{appointments.data}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -742,7 +742,7 @@
               "chartData": {
                 "6gd8uo75i9": {
                   "seriesName": "Vaccine Effeci",
-                  "data": "{{Query4.data.map( (obj) =>{ return  {'x': obj.vaccine, 'y': obj.effectiveness } })}}"
+                  "data": "{{stonks.data.map( (obj) =>{ return  {'x': obj.vaccine, 'y': obj.effectiveness } })}}"
                 }
               },
               "animateLoading": true,
@@ -849,7 +849,8 @@
               "chartData": {
                 "2x13xfxfkz": {
                   "seriesName": "Sales",
-                  "data": "{{Query5.data.map( (obj) =>{ return  {'x': obj.vaccine, 'y': obj.stocks } })}}"
+                  "data": "{{stonks.data.map( (obj) =>{ return  {'x': obj.vaccine, 'y': obj.stocks } })}}",
+                  "color": "#be185d"
                 }
               },
               "animateLoading": true,
@@ -941,7 +942,7 @@
               "zoomLevel": 60,
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "Map1",
-              "defaultMarkers": "{{Query2.data.map( (obj) =>{ return  {'lat': obj.details.position[0], 'long': obj.details.position[1],'title':obj.address ,\"color\":\"red\"} })}}",
+              "defaultMarkers": "{{appointments.data.map( (obj) =>{ return  {'lat': obj.details.position[0], 'long': obj.details.position[1],'title':obj.address ,\"color\":\"red\"} })}}",
               "dynamicPropertyPathList": [
                 {
                   "key": "defaultMarkers"
@@ -949,15 +950,19 @@
               ],
               "displayName": "Map",
               "iconSVG": "/static/media/icon.ddde7d1b6b4d64050fde21a347260464.svg",
-              "topRow": 111,
-              "bottomRow": 151,
+              "topRow": 110,
+              "bottomRow": 150,
               "parentRowSpace": 10,
               "type": "MAP_WIDGET",
               "hideCard": false,
               "animateLoading": true,
               "allowZoom": true,
               "parentColumnSpace": 17.9375,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onMarkerClick"
+                }
+              ],
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
@@ -967,6 +972,7 @@
                   "key": "defaultMarkers"
                 }
               ],
+              "onMarkerClick": "",
               "enablePickLocation": true,
               "mapCenter": {
                 "lat": 19.2094006,
@@ -978,7 +984,7 @@
               "enableSearch": true,
               "key": "u7jn0m2mhf",
               "isDeprecated": false,
-              "rightColumn": 24,
+              "rightColumn": 63,
               "widgetId": "rfjk3bea77",
               "enableCreateMarker": false,
               "isVisible": true,
@@ -993,16 +999,16 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_Query1",
-              "name": "Query1",
+              "id": "Page1_appointments",
+              "name": "appointments",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_Query2",
-              "name": "Query2",
+              "id": "Page1_users",
+              "name": "users",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -1011,16 +1017,8 @@
           ],
           [
             {
-              "id": "Page1_Query4",
-              "name": "Query4",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_Query5",
-              "name": "Query5",
+              "id": "Page1_stonks",
+              "name": "stonks",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
